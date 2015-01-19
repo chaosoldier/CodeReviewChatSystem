@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<wicket:head>
+</wicket:head>
+</head>
+<body>
+	<wicket:extend>
+		<h1>アカウント編集ページ</h1>
+		<h1></h1>
+			<div class="box-registration">
+			<form wicket:id="toAccountUpdateCheckPage">
+				<div class="container">
+
+						<div class="row">
+
+							<p class="col-sm-3">名前</p>
+
+							<div class="form-group">
+								<div class="col-sm-4">
+									<input id="user_name" type="text" class="form-control"
+										wicket:id="newName" />
+								</div>
+							</div>
+
+
+						</div>
+						<div class="row">
+
+							<p class="col-sm-3">ふりがな</p>
+
+							<div class="form-group">
+								<div class="col-sm-4">
+									<input id="kana" type="text" class="form-control"
+										wicket:id="newRoman_name" />
+								</div>
+							</div>
+
+
+						</div>
+						<div class="row">
+
+							<p class="col-sm-3">所属組織</p>
+
+							<div class="form-group">
+								<div class="col-sm-4">
+									<input id="group" type="text" class="form-control"
+										wicket:id="newOrganization" />
+								</div>
+							</div>
+
+
+						</div>
+						<div class="row">
+						<p class="col-sm-3">領収書の名前</p>
+
+							<div class="form-group">
+								<div class="col-sm-4">
+									<input id="mail" type="text" class="form-control"
+										wicket:id="newReceipt_name" />
+								</div>
+							</div>
+
+
+
+						</div>
+				</div>
+				<h1></h1>
+				<div class="text-center">
+					<button type="submit" class="btn btn-default btn-lg">内容を確認する</button>
+				</div>
+				</form>
+				<!-- div class="box-registration -->
+
+			</div>
+
+	<br>
+	</wicket:extend>
+
+</body>
+</html>

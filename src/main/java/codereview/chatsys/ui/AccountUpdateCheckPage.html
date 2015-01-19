@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<wicket:head>
+</wicket:head>
+</head>
+<body>
+	<wicket:extend>
+		<h1>アカウント編集確認ページ</h1>
+		<h1></h1>
+		<p>登録情報を以下の通りに変更しますか？</p>
+			<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr class="active">
+									<th></th>
+									<th><p>名前</p></th>
+									<th><p>ふりがな</p></th>
+									<th><p>所属組織</p></th>
+									<th><p>領収書の名前</p></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><p>変更前</p></td>
+									<td wicket:id="oldName"></td>
+									<td wicket:id="oldRoman_name"></td>
+									<td wicket:id="oldOrganization"></td>
+									<td wicket:id="oldReceipt_name"></td>
+								</tr>
+								<tr>
+									<td><p>変更後</p></td>
+									<td wicket:id="newName"></td>
+									<td wicket:id="newRoman_name"></td>
+									<td wicket:id="newOrganization"></td>
+									<td wicket:id="newReceipt_name"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- <p class="text-center">
+						<button class="btn btn-large" wicket:id="toAccountUpdatePageHtml">登録情報の編集に戻る</button>
+						<button class="btn btn-large" wicket:id="toAccountUpdateCompletedPageHtml">この内容で登録する</button>
+					</p> -->
+					<form wicket:id="buttonForm" class="text-center">
+							<button class="btn btn-large" wicket:id="toAccountUpdatePage">登録情報の編集に戻る</button>
+							<button class="btn btn-large" wicket:id="toAccountUpdateCompletedPage">この内容で登録する</button>
+					</form>
+	</wicket:extend>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:wicket="http://wicket.apache.org/">
+<head>
+<wicket:head>
+
+</wicket:head>
+</head>
+<body>
+	<wicket:extend>
+		<p></p>
+		<h4>大会入口</h4>
+		<p></p>
+		<p>このページから各大会に進むことで、すべての大会の管理者の権限を行使できます。システム管理者のみ利用できます。</p>
+			<div class="container">
+			<div class="row">
+				<div class="col-xs-8">
+					<table class="table table-bordered">
+						<tr wicket:id="table">
+							<td><a wicket:id="toIndividualTopPageHTML"> <span
+									wicket:id=title></span>
+							</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h4>このシステムでできること</h4>
+		<p>このシステムは大会の管理システムです。</p>
+		<p>ユーザが大会に参加するとき、新規登録から次のことができます。</p>
+		<ol type=i>
+			<li>
+				聴講者として大会に参加【自動承認・非自動承認】	
+			</li>
+			<li>
+				講演者として大会に参加し、発表する論文の投稿・管理を行う【非自動承認】
+			</li>
+		</ol>
+			<p>システム管理者から承認された各大会の管理者は次のことができます。</p>
+		<ol type=i>
+			<li>
+				各大会の管理
+			</li>
+		</ol>
+
+		<hr>
+		<h4>管理者メニューについて</h4>
+		<p>
+			管理者トップページ（大会入り口ページ）：
+		</p>
+		<p>このページです。このページから各大会に進むことで、すべての大会の管理者の権限を行使できます。システム管理者のみ利用できます。</p>
+		<p></p>
+		<p>
+			<a wicket:id="toConferenceInsertPagePageHtml">大会追加ページ</a>：
+		</p>
+		<p>大会の追加ができます</p>
+		<p></p>
+		<p>
+			<a wicket:id="toAdminConferenceContentPageHtml">大会一覧ページ</a>
+		</p>
+		<p>大会の基本情報の編集と大会の削除、メール送信機能などができます。システム管理者のみ利用できます。</p>
+		<ol>
+			<li>大会ごとのメール送信ページ：大会ごとに登録者全員に対してメールを送信することができます。</li>
+			<li>大会確認ページ：大会の基本情報の編集、大会の削除ができます。</li>
+		</ol>
+		<p></p>
+		<p>
+			<a wicket:id="toAccountListPageHtml">一般ユーザ一覧ページ</a>
+		</p>
+		<p>一般ユーザの一覧から、ユーザの編集と削除ができます。システム管理者のみ利用できます。</p>
+		<p></p>
+		<hr>
+
+		
+	
+
+	</wicket:extend>
+</body>
+</html>
