@@ -12,13 +12,17 @@ import codereview.chatsys.definition.MessageType;
  */
 @Value
 public class MessageBean implements Serializable{
-	private static final long serialVersionUID = -7019870973585985052L;
-	private int message_id;
-	private int account_id;
-	private MessageType type;
-	private String body;
-	private Timestamp inserted_at;
-	private boolean check_available;
+	private static final long serialVersionUID = -7019870973585985052L;	/* serialVersionUID */
+	private int message_id;		/* メッセージのID */
+	private int account_id;		/* アカウントID */
+	private MessageType type;	/* メッセージの種類 */
+	private String body;		/* メッセージの中身そのもの */
+	private Timestamp inserted_at;	/* 投稿時刻を表す変数 */
+	private boolean check_available;	/* おしえて誰か */
+	
+	/*
+	 * メッセージの定義
+	 */
 	public MessageBean(int message_id, int account_id, MessageType type,
 			String body, Timestamp inserted_at, boolean check_available) {
 		super();
