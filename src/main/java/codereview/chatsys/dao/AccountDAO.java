@@ -20,7 +20,12 @@ public class AccountDAO implements IAccountDAO {
 	@Inject
 	private IDBCP dbcp;
 
-
+	/*
+	 * login()関数。
+	 * それぞれString型であるメールアドレスとパスワードを引数とする。
+	 * SQLを参照し、メールアドレスとパスワードがすべて一致していれば真を返す
+	 * そうでなければ偽を返す。
+	 */
 	@Override
 	public boolean login(String email,String password)throws SQLException, NullPointerException {
 		try (Connection con = dbcp.getSql2o().open()) {
@@ -32,6 +37,11 @@ public class AccountDAO implements IAccountDAO {
 		}
 		return false;
 	}
+	
+	/*
+	 * affirmEncrypter()関数。
+	 * 調べ中
+	 */
 	@Override
 	public Encrypter affirmEncrypter(String email)
 			throws SQLException, NullPointerException {
@@ -41,6 +51,9 @@ public class AccountDAO implements IAccountDAO {
 			String sql = "select encrypter from account where email_address = :email";
 			encrypterStr = con.createQuery(sql).addParameter("email",email).executeScalar(String.class);
 		}
+		/*
+		 * encrypterStrの中身によって分岐
+		 */
 		switch (encrypterStr) {
 		case "TYPE1":
 			encrypter = Encrypter.TYPE1;
