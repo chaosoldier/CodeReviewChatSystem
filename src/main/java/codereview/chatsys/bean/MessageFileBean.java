@@ -13,14 +13,17 @@ import lombok.Value;
  */
 @Value
 public class MessageFileBean implements Serializable {
-	private static final long serialVersionUID = -6621182091682997484L;
-	private int message_file_id;
-	private int message_id;
+	private static final long serialVersionUID = -6621182091682997484L;		/* serialVersionUID */
+	private int message_file_id;		/* メッセージに添付するファイルのID */
+	private int message_id;		/* メッセージのID */
 	/**
 	 * メッセージに関連付けされたファイルを入れるためのフィールド
 	 */
 	private byte[] data;
-	private String file_name;
+	private String file_name;	/* 添付されたファイルの名前 */
+	/*
+	 * 添付ファイルの定義
+	 */
 	public MessageFileBean(int message_file_id, int message_id, byte[] data,
 			String file_name) {
 		super();
