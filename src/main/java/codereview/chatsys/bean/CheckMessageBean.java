@@ -18,7 +18,7 @@ public class CheckMessageBean implements Serializable {
 	private int account_id;			/* アカウントID */
 	private Timestamp inserted_at;		/* メッセージの投稿時刻を表す変数 */
 	/*
-	 * メッセージの定義？
+	 * 既読メッセージの定義？
 	 */
 	public CheckMessageBean(int read_message_id, int message_id, int account_id,
 			Timestamp inserted_at) {
