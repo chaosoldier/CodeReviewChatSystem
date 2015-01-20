@@ -13,18 +13,21 @@ import lombok.Value;
  */
 @Value
 public class PersonalBean implements Serializable {
-	private static final long serialVersionUID = -3853277355815929746L;
-	private int personal_id;
-	private int account_id;
-	private String name;
-	private String roman_name;
+	private static final long serialVersionUID = -3853277355815929746L;		/* serialVersionUID */
+	private int personal_id;	/* ユーザのアイコンのID */
+	private int account_id;		/* ユーザアカウントのID */
+	private String name;		/* ユーザの名前(あやしい) */
+	private String roman_name;	/* ユーザのアイコンの名前？(あやしい) */
 	/**
 	 * アバターを入れるためのフィールド
 	 */
 	private byte[] data;
-	private String file_name;
-	private Timestamp inserted_at;
-	private Timestamp updated_at;
+	private String file_name;	/* 誰かおしえて */
+	private Timestamp inserted_at;	/* アイコンを登録したときの時刻を表す変数 */
+	private Timestamp updated_at;	/* アイコン画像を変えたときの時刻を表す変数 */
+	/*
+	 * アバターの定義
+	 */
 	public PersonalBean(int personal_id, int account_id, String name,
 			String roman_name, byte[] data, String file_name,
 			Timestamp inserted_at, Timestamp updated_at) {
