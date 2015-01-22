@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<!-- <wicket:head>
+</wicket:head> -->
+</head>
+<body>
+ <div class="header">
+        <nav class="navbar navbar-default nav" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand" href="#">CodeReviewChatSystem</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-collapse-01">
+      <p class="navbar-text navbar-right"><a class="navbar-link"  wicket:id="toLogoutPageHtml">ログアウト</a></p>
+      <p class="navbar-text navbar-right"><a class="navbar-link" wicket:id="toIndexPageHtml">チャットページ</a></p>
+      </div><!-- /.navbar-collapse -->
+    </nav><!-- /navbar -->
+  </div>
+
+ <div class="container">
+
+  <div class="row">
+    【<span wicket:id="nameHtml">ユーザー名</span>様の情報】
+  
+    <div class="col-sm-6" >
+    	<!--ユーザー名はユーザーごとに表示変わると思うので今はとりあえずタグで表示してるだけ-->
+    
+	<h5>プロフィール画像の変更</h5>
+	<img wicket:id="hoge" class="img-responsive" alt="Responsive image">
+	<form role="form" wicket:id="toAccountUpdateCompletePage">
+    <div class="form-group">
+    <label for="exampleInputFile">プロフィール画像の変更</label>
+    <input type="file" id="exampleInputFile" wicket:id="fileUploadHtml">
+    <p class="help-block">画像を選択して「プロフィール画像を変更する」を押してください。</p>
+    <button type="submit" class="btn btn-default">  <span class="fui-info-circle"></span> プロフィール画像を変更する</button>
+  	</div>
+  	</form>
+
+
+    </div>
+    <div class="col-sm-6" >
+    <h5>パスワード情報の変更</h5>
+	
+	<form role="form" wicket:id="passwordUpdateFormHtml">
+  	<div class="form-group">
+    <label for="exampleInputPassword2">変更後のパスワード</label>
+    <input wicket:id="pass" type="password" class="form-control col-sm-6" id="exampleInputPassword2" placeholder="Password">
+  	</div>
+  	<div class="form-group">
+    <label for="exampleInputPassword2">変更後パスワードの再確認</label>
+    <input wicket:id="repass" type="password" class="form-control col-sm-6" id="exampleInputPassword2" placeholder="Confirm Password">
+  	</div>
+    <button type="submit" class="btn btn-default">パスワードを変更する</button>
+
+  	</form>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
